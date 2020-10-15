@@ -1,0 +1,11 @@
+
+<h2>Hi <%=@user.user_name%>!</h2>
+ 
+ <%if !@user.teacher%>
+ <%= link_to '<button class=button>Questions</button>'.html_safe, new_user_answers_path %>
+ <%= link_to '<button class=button>LogOut</button>'.html_safe, sessions_path, method: :delete %>
+<%else%>
+<%= link_to '<button class=button>Teacher Portal</button>'.html_safe, teacher_portal_path %>
+<%= link_to '<button class=button>LogOut</button>'.html_safe, sessions_path, method: :delete %>
+<%end%>
+

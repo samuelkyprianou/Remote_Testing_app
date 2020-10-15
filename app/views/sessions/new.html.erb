@@ -1,0 +1,18 @@
+
+  <h1 class= "cover-heading" style="color:rgb(255, 115, 0)" >Welcome to the exam center!</h1>
+  <h3>Login: </h3><br>
+  <div>
+        <%= form_tag sessions_path do %>
+        <table class = "center">
+         
+          <tbody>
+              <tr>
+                <td><%= label :user, :user_name %></td>
+                <td><%= text_field :user, :user_name %></td>
+              </tr>
+          </tbody>
+        </table><br>
+        <button type="submit" class="btn btn-danger text-uppercase " >Login</button>
+        <% end %>
+  </div>
+  

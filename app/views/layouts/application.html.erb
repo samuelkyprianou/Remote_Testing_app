@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ExamApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <% if current_user %>
+        <nav>
+        <div class="nav_link">
+           <%= link_to "Home", user_path(current_user.id) %>
+        </div>
+        <div class="nav_link">
+              <%= link_to 'Questions', new_user_answers_path %>
+        </div>
+        <div class="nav_link">
+              <%= link_to 'Teachers Portal', teacher_portal_path%>
+        </div>
+        <div class="nav_link">
+              <%= link_to 'Logout', sessions_path, method: :delete%>
+        </div>
+      
+      </nav>
+      <%end%>
+    <% if flash[:notice] %>
+      <div class="alert alert-danger" role="alert">
+        <%= flash[:notice]%>
+      </div>  
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>

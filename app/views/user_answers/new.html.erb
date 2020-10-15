@@ -1,0 +1,17 @@
+  <h3>Question: <%=@question.question%></h3>
+
+    <div>
+        <%= form_for(@user_anwser) do |f|  %>
+        
+        <%= radio_button_tag(:answer_option_id, @answers[0].id) %>
+        <%= label_tag(:option, @answers[0].option) %>
+        <%= radio_button_tag(:answer_option_id, @answers[1].id) %>
+         <%= label_tag(:option, @answers[1].option) %>
+         <%= radio_button_tag(:answer_option_id, @answers[2].id) %>
+        <%= label_tag(:option, @answers[2].option) %>
+        <%= radio_button_tag(:answer_option_id, @answers[3].id) %>
+         <%= label_tag(:option, @answers[3].option) %>
+         <%= hidden_field_tag(:user_id, current_user.id) %>
+        <button type="submit" class="btn btn-danger text-uppercase " >submit</button>
+        <% end %>
+  </div>

@@ -1,0 +1,33 @@
+<h1>Teacher Portal</h1>
+<h2>Hi <%=current_user.user_name%></h2>
+
+<table style="width:100%">
+    <tr>  
+    <th>Student Name</th> 
+    <th>Current Pass Rate</th> 
+    <th>Catergory 1</th> 
+    <th>Catergory 2</th> 
+    <th>Catergory 3</th> 
+    <th>Catergory 4</th> 
+    <th>Catergory 5</th>
+    </tr>
+
+   <% @students.each do |student| %>
+      <tr style="text-align: center">
+      <td><%=student["name"]%></td> 
+      <td><%=student["pass_rate"]%>%</td>
+      <td><%=student["answered_questions"]["category 1"]%>/10</td>
+      <td><%=student["answered_questions"]["category 2"]%>/10</td>
+      <td><%=student["answered_questions"]["category 3"]%>/10</td>
+      <td><%=student["answered_questions"]["category 4"]%>/10</td>
+      <td><%=student["answered_questions"]["category 5"]%>/10</td>
+      </tr>
+   <% end %>
+</table>
+
+<h2>Current Live Question Category: <%=current_user["active_category"]%></h2>
+
+<h3>Please Select New Question Catergory</h3>
+<%=form_with(url: update_category_path, method: "patch")%>
+<%= select(:user, :active_category, [["1", 1], ["2", 2], ["3", 3], ["4", 4], ["5", 5]] ) %>
+<button type="submit" class="btn btn-danger text-uppercase " >submit</button>
