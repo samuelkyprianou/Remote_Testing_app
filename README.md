@@ -8,4 +8,24 @@ Steps -
 
 - Open In Editor
 
-- Run "bundle install" in terminal
+# In Terminal Run (In following order)
+
+- bundle install
+
+* yarn install
+
+* rails db:migrate
+
+* rails db:seed
+
+* rails s
+
+If done correct you should be able to log in with the certain usernames: -
+
+# Teacher Account
+
+* Sam
+
+# Student Account
+
+* John / Jeff / Mike
