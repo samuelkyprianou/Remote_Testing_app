@@ -15,7 +15,7 @@ s2 = User.create(user_name:"Jeff", teacher: false, active_category: 1)
 s3  = User.create(user_name:"Mike", teacher: false, active_category: 1)
 
 
-
+#---- Questions & Answers
     (1..5).each do |i| 
 (1..10).each do |ii| 
 q = Question.create(question: "question#{ii}", category: i)
