@@ -1,6 +1,6 @@
-# Student Teacher Remost Test Center
+# Student Teacher Remote Test Center
 
-This is a rails static app that lets teachers to create a test enviroment for thier students.
+This is a rails static app that lets teachers create a test enviroment for their students.
 
 Steps -
 
@@ -20,7 +20,7 @@ Steps -
 
 * rails s
 
-If done correct you should be able to log in with the certain usernames: -
+If done correct you should be able to log in with the following usernames: -
 
 # Teacher Account
 
